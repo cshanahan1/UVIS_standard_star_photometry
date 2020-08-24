@@ -3,12 +3,15 @@ Configuration file for standard_star_phot_pipeline. Set all paths and parameters
 here before running standard_star_phot_pileline.py.
 """
 
+import os
+
 # Path to directory where data will be downloaded, and sorted into 
-DATA_DIR = '/grp/hst/wfc3p/cshanahan/phot_group_work/standard_star_data/staring_mode_data/'
+DATA_DIR = '/grp/hst/wfc3p/cshanahan/phot_group_work/data/standard_star_data/staring_mode_data'
+DATA_DIR = os.path.join(DATA_DIR, '')
 
 # output directory for log files, photometry catalots
 OUTPUT_DIR = '/grp/hst/wfc3p/cshanahan/phot_group_work/analysis_pipelines/standard_star_photometry_pipeline/output/'
-
+OUTPUT_DIR = os.path.join(OUTPUT_DIR, '')
 
 # Desired file type for download/photometry (i.e flc, flt, drz...)
 FILE_TYPE = 'flc'
